@@ -41,7 +41,11 @@ if(frameCount%100===0){
  planetgroup.add(meteor1.body) 
 }
 if(Rocket1.body.isTouching(Safe)){
+  textSize(50)
   text("you are safe ",Rocket1.body.x,200)
+  Rocket1.body.velocityY=0
+  Rocket1.body.velocityX=0
+  planetgroup.setVelocityEach(0,0)
 }
 if(Rocket1.body.y<0 ||Rocket1.body.y>height){
 gameState="end"
