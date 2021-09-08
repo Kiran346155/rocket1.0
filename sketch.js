@@ -18,7 +18,7 @@ function setup() {
    newx=newx+300
  }
 Safe=createSprite(newx,height/2,20,600)
-Safe.visible=false;
+Safe.shapeColor="red";
 
 }
 
@@ -46,6 +46,7 @@ if(Rocket1.body.isTouching(Safe)){
   Rocket1.body.velocityY=0
   Rocket1.body.velocityX=0
   planetgroup.setVelocityEach(0,0)
+  gameState="end"
 }
 if(Rocket1.body.y<0 ||Rocket1.body.y>height){
 gameState="end"
